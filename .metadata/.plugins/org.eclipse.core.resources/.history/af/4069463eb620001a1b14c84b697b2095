@@ -1,0 +1,72 @@
+package com.bridgelabz.usermanagement.entity;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@Entity
+public class User {
+	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int userId;
+	
+
+	private String firstName;
+	
+
+	private String middleName;
+	
+
+	private String lastName;
+	
+
+	private String dateOfBirth;
+	
+	
+	private String gender;
+	
+	
+	private String country;
+	
+
+	private String phone;
+	
+	@NotNull
+	private String email;
+	
+
+	private String address;
+	
+	@NotNull
+	private String username;
+	
+	@NotNull
+	private String password;
+	
+	@NotNull
+	private String role;
+	
+
+	private boolean status;
+	
+
+	private String profile;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdDate;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date updatedDate;
+	
+	@Column(name = "user_last_login")
+	private Date lastLogin;
+	
+	@JsonIgnoreProperties(value = "user")
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Privilege> privileges;
+	
+	@JsonIgnoreProperties(value = "user")
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<LoginHistory> logins;
+
+}

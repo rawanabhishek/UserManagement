@@ -1,0 +1,9 @@
+package com.bridgelabz.usermanagement.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.bridgelabz.usermanagement.entity.Privilege;
+
+public interface PrivilegeRepository extends JpaRepository<Privilege, Integer>{
+
+}

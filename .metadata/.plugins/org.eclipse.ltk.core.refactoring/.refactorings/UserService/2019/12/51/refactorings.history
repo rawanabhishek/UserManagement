@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LoginDTO.java&apos; to &apos;UserManagement/src/main/java/com.bridgelabz.usermanagement.dto&apos;&#x0A;- Original project: &apos;UserService&apos;&#x0A;- Destination element: &apos;UserManagement/src/main/java/com.bridgelabz.usermanagement.dto&apos;&#x0A;- Original element: &apos;com.bridgelabz.fundoo.user.dto.LoginDTO.java&apos;" description="Copy compilation unit" destination="=UserManagement/src\/main\/java&lt;com.bridgelabz.usermanagement.dto" element1="/src\/main\/java&lt;com.bridgelabz.fundoo.user.dto{LoginDTO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1576577055053" units="1" version="1.0"/>
+</session>
