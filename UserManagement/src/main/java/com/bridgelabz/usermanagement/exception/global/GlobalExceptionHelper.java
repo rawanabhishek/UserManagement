@@ -1,18 +1,18 @@
-package com.bridgelabz.usermanagement.exception.global;
+
 
 /******************************************************************************
  
  *  Purpose: To create a Global Exception Handler Class which will handle all
- *           the global exception of userService API's and also handles the 
- *           the global exception for custom Exception handler of UserService
+ *           the global exception of UserManagement API's and also handles the 
+ *           the global exception for custom Exception handler of UserManagement
  *           API's.
  *  		
  *  @author  Abhishek Rawat
  *  @version 1.0
- *  @since   21-10-2019
+ *  @since   17-12-2019
  *
  ******************************************************************************/
-
+package com.bridgelabz.usermanagement.exception.global;
 
 
 import org.springframework.http.HttpStatus;

@@ -2,11 +2,11 @@
 
 /******************************************************************************
  
- *  Purpose: This is a service class for userService implementing userService
- *           interface methods 
+ *  Purpose: This is a service class for user management implementing user
+             management interface methods
  *  @author  Abhishek Rawat
  *  @version 1.0
- *  @since   20-10-2019
+ *  @since   17-12-2019
  *
  ******************************************************************************/
 package com.bridgelabz.usermanagement.service;

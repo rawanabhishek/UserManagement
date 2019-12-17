@@ -1602,3 +1602,8 @@ Unconditional classes:
 2019-12-17 17:40:41.961  INFO 31240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
 2019-12-17 17:40:41.962  INFO 31240 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 0.805 seconds (JVM running for 58.066)
 2019-12-17 17:40:41.963  INFO 31240 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-17 19:11:57.095  INFO 31240 --- [RMI TCP Connection(106)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-17 19:11:57.097  INFO 31240 --- [RMI TCP Connection(106)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-17 19:11:57.098  INFO 31240 --- [RMI TCP Connection(106)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-17 19:11:57.099  INFO 31240 --- [RMI TCP Connection(106)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-12-17 19:11:57.103  INFO 31240 --- [RMI TCP Connection(106)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

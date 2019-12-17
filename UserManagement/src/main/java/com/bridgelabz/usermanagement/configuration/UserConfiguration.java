@@ -1,12 +1,12 @@
 /******************************************************************************
  
  *  Purpose: A configuration class which holds all the configuration
- *  		 related to the UserService application and Create the bean
- *           for the UserService application using Bean Annotation .
+ *  		 related to the UserManagment application and Create the bean
+ *           for the UserManagement application using Bean Annotation .
  *  		
  *  @author  Abhishek Rawat
  *  @version 1.0
- *  @since   20-10-2019
+ *  @since   17-12-2019
  *
  ******************************************************************************/
 package com.bridgelabz.usermanagement.configuration;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+    <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.configuration.UserConfiguration"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.exception.custom.UserException"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.RegisterDTO"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.Privilege"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.LoginHistory"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.service.IUserService"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.LoginDTO"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.response.Response"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.utility.CommonFiles"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.UserDTO"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.utility.TokenUtility"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.User"/>
+</qualifiedTypeNameHistroy>

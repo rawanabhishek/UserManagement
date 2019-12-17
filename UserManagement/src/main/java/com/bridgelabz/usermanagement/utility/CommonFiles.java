@@ -4,11 +4,11 @@
 /******************************************************************************
  *  Purpose: To create a  Common File class which holds all the 
 
- *           static references which can be used in user Service
+ *           static references which can be used in user management
  *
  *  @author  Abhishek Rawat
  *  @version 1.0
- *  @since   23-10-2019
+ *  @since   17-12-2019
  *
  ******************************************************************************/
 package com.bridgelabz.usermanagement.utility;

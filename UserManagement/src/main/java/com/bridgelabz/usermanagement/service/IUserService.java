@@ -1,18 +1,18 @@
-package com.bridgelabz.usermanagement.service;
+
 
 /******************************************************************************
  
- *  Purpose: This is interface of User Service class  it handles  all the 
+ *  Purpose: This is interface of User Management class  it handles  all the 
  *           request coming from controller and  then process   in service 
  *           implementation class where all the method of this service is 
  *           implemented .
  *  		 
  *  @author  Abhishek Rawat
  *  @version 1.0
- *  @since   20-10-2019
+ *  @since   17-12-2019
  *
  ******************************************************************************/
-
+package com.bridgelabz.usermanagement.service;
 
 import java.io.IOException;
 
