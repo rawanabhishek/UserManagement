@@ -1,5 +1,4 @@
 
-
 /******************************************************************************
  
  *  Purpose: This is a service class for user management implementing user
@@ -19,6 +18,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Date;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.apache.commons.io.FilenameUtils;
@@ -34,13 +34,13 @@ import com.bridgelabz.usermanagement.configuration.UserConfiguration;
 import com.bridgelabz.usermanagement.dto.LoginDTO;
 import com.bridgelabz.usermanagement.dto.UserDTO;
 import com.bridgelabz.usermanagement.entity.LoginHistory;
+import com.bridgelabz.usermanagement.entity.Privilege;
 import com.bridgelabz.usermanagement.entity.User;
 import com.bridgelabz.usermanagement.exception.custom.UserException;
+import com.bridgelabz.usermanagement.repository.PrivilegeRepository;
 import com.bridgelabz.usermanagement.repository.UserRepository;
 import com.bridgelabz.usermanagement.response.Response;
 import com.bridgelabz.usermanagement.utility.CommonFiles;
-
-
 
 @Service
 public class ImplUserService implements IUserService {
@@ -49,15 +49,15 @@ public class ImplUserService implements IUserService {
 	private UserRepository userRepository;
 
 	@Autowired
+	private PrivilegeRepository PrivilegeRepository;
+
+	@Autowired
 	private UserConfiguration userConfiguration;
 
 	@Autowired
 	private ModelMapper modelMapper;
 
-	
-
 	public static final Logger LOG = LoggerFactory.getLogger(ImplUserService.class);
-
 
 	@Override
 	public Response userLogin(LoginDTO loginDTO) {
@@ -67,37 +67,34 @@ public class ImplUserService implements IUserService {
 		if (user == null) {
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
 		}
-		if (!userRepository.findAll().stream()
-				.anyMatch(i -> i.getUserName().equals(loginDTO.getUserName())
-						&& userConfiguration.passwordEncoder().matches(loginDTO.getPassword(), i.getPassword())
-						)) {
+		if (!userRepository.findAll().stream().anyMatch(i -> i.getUserName().equals(loginDTO.getUserName())
+				&& userConfiguration.passwordEncoder().matches(loginDTO.getPassword(), i.getPassword()))) {
 			throw new UserException(CommonFiles.LOGIN_FAILED);
 		}
-		LoginHistory logs =new LoginHistory();
+		LoginHistory logs = new LoginHistory();
 		logs.setLoginHistory(new Date());
 		user.getLogins().add(logs);
+
 		user.setLastLogin(new Date());
 		userRepository.save(user);
-		
-		
-		return new Response(200, CommonFiles.LOGIN_SUCCESS,user);
+
+		return new Response(200, CommonFiles.LOGIN_SUCCESS, user);
 
 	}
 
-
-	
 	@Override
-	public Response userRegister( MultipartFile file,UserDTO register) {
+	public Response userRegister(MultipartFile file, UserDTO register) {
 		LOG.info(CommonFiles.SERVICE_REGISTER_METHOD);
-
-		if (userRepository.findByEmailAndUserName(register.getEmail(), register.getUserName())) {
+		User user = userRepository.findByEmailAndUserName(register.getEmail(), register.getUserName()).orElse(null);
+		if (user != null) {
 			throw new UserException(register.getEmail() + CommonFiles.REGISTER_EMAIL_FOUND);
 
 		}
-		
-		User user = modelMapper.map(register, User.class);
-		if (file != null && file.getContentType() != null
-				&& !file.getContentType().toLowerCase().startsWith("image"))
+		register.setPassword(userConfiguration.passwordEncoder().encode(register.getPassword()));
+
+		user = modelMapper.map(register, User.class);
+
+		if (file != null && file.getContentType() != null && !file.getContentType().toLowerCase().startsWith("image"))
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
 
 		byte[] bytes;
@@ -112,17 +109,17 @@ public class ImplUserService implements IUserService {
 			e.printStackTrace();
 		}
 
-	
+		userRepository.save(user);
 
-		register.setPassword(userConfiguration.passwordEncoder().encode(register.getPassword()));
+//		Privilege privilege = new Privilege();
+//		privilege.setUser(user);
+//
+//		PrivilegeRepository.save(privilege);
 
-
-
-		return new Response(200, CommonFiles.REGISTER_SUCCESS, userRepository.save(user));
+		return new Response(200, CommonFiles.REGISTER_SUCCESS, user);
 
 	}
 
-	
 	@Override
 	public Response userForgotPassword(String email) {
 		LOG.info(CommonFiles.SERVICE_FORGOTPASSWORD_METHOD);
@@ -132,20 +129,13 @@ public class ImplUserService implements IUserService {
 
 		}
 
-
 		return new Response(200, CommonFiles.EMAIL_SUCCESS, true);
 
 	}
 
-
-
-
-
-
-	
 	@Override
 	public User addProfilePic(String email, MultipartFile file) throws IOException {
-		
+
 		User user = userRepository.findByEmail(email).orElse(null);
 
 		if (user == null) {
@@ -159,15 +149,13 @@ public class ImplUserService implements IUserService {
 
 		user.setProfilePicture(CommonFiles.PROFILE_PIC_PATH + email + "." + extension);
 
-		return  userRepository.save(user);
+		return userRepository.save(user);
 
 	}
 
-
-
 	@Override
 	public User removeProfilePic(String email) throws IOException {
-		
+
 		User user = userRepository.findByEmail(email).orElse(null);
 
 		if (user == null) {
@@ -177,13 +165,12 @@ public class ImplUserService implements IUserService {
 
 		Files.delete(path);
 		user.setProfilePicture(null);
-		return  userRepository.save(user);
+		return userRepository.save(user);
 	}
-
 
 	@Override
 	public User updateProfilePic(String email, MultipartFile file) throws IOException {
-	
+
 		User user = userRepository.findByEmail(email).orElse(null);
 		System.out.println("Update profile pic service");
 		if (user == null) {
@@ -200,12 +187,12 @@ public class ImplUserService implements IUserService {
 
 		user.setProfilePicture(CommonFiles.PROFILE_PIC_PATH + email + "." + extension);
 
-		return  userRepository.save(user);
+		return userRepository.save(user);
 	}
 
 	@Override
 	public Response getProfilePic(String email) {
-		
+
 		User user = userRepository.findByEmail(email).orElse(null);
 		if (user == null) {
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
@@ -240,21 +227,18 @@ public class ImplUserService implements IUserService {
 
 	}
 
-	
 	@Override
 	public Response getAllUser() {
-		
-		return new Response(200 , CommonFiles.GET_ALL_USER, userRepository.findAll().stream().collect(Collectors.toList()));
+
+		return new Response(200, CommonFiles.GET_ALL_USER,
+				userRepository.findAll().stream().collect(Collectors.toList()));
 	}
 
-
-
-	
 	@Override
 	public User getUser(String email) {
 		LOG.info(CommonFiles.GET_USER);
 		return userRepository.findByEmail(email).get();
-		
+
 	}
 
 }

@@ -1,0 +1,31 @@
+package com.bridgelabz.usermanagement.entity;
+
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class Permission {
+	
+
+	private String permissionName;
+	
+	private boolean add;
+	
+
+	private boolean delete;
+	
+
+	private boolean modify;
+	
+
+	private boolean read;
+	
+	
+
+}

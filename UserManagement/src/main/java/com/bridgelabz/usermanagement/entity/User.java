@@ -85,11 +85,11 @@ public class User {
 	private Date lastLogin;
 	
 	@JsonIgnoreProperties(value = "user")
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany( fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Privilege> privileges;
 	
 	@JsonIgnoreProperties(value = "user")
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany( fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<LoginHistory> logins;
 
 }

@@ -1,0 +1,18 @@
+package com.bridgelabz.usermanagement.entity;
+
+public class Permission {
+	
+	
+	
+	private boolean add;
+	
+
+	private boolean delete;
+	
+
+	private boolean modify;
+	
+
+	private boolean read;
+
+}

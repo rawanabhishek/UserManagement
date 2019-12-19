@@ -24,6 +24,7 @@ public class UserDTO {
 	private String password;
 	private String role;
 	private String profilePicture;
+	private boolean status;
 	
 	
 	private List<Privilege> privileges;

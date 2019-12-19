@@ -23,6 +23,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,7 +39,10 @@ import com.bridgelabz.usermanagement.entity.User;
 import com.bridgelabz.usermanagement.response.Response;
 import com.bridgelabz.usermanagement.service.IUserService;
 import com.bridgelabz.usermanagement.utility.CommonFiles;
+import com.bridgelabz.usermanagement.utility.JsonUtility;
 import com.bridgelabz.usermanagement.utility.TokenUtility;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 
 
@@ -78,13 +82,18 @@ public class UserController {
 	 * @param register object containing user registration details .
 	 * @return ResponseEntity which is holding the user object and HttpStatus in
 	 *         that entity.
+	 * @throws JsonProcessingException 
+	 * @throws JsonMappingException 
 	 * 
 	 */
 	@PostMapping("/register")
-	public ResponseEntity<Response> userRegister(@RequestParam("picture") MultipartFile file,
-			@RequestBody UserDTO register) {
+	public ResponseEntity<Response> userRegister( @RequestParam("picture") MultipartFile file,
+			@RequestParam("json") String json) throws JsonMappingException, JsonProcessingException {
+		UserDTO userDTO = new UserDTO();
+		userDTO = (UserDTO) JsonUtility.readMapper(json, userDTO);
+		System.out.println(userDTO);
 		LOG.info(CommonFiles.CONTROLLER_REGISTER_METHOD);
-		return new ResponseEntity<>(userService.userRegister(file ,register), HttpStatus.OK);
+		return new ResponseEntity<>(userService.userRegister(file ,userDTO), HttpStatus.OK);
 	}
 
 	/**

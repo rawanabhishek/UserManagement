@@ -1,0 +1,20 @@
+package com.bridgelabz.usermanagement.utility;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bridgelabz.usermanagement.dto.UserDTO;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class JsonUtility {
+	
+	@Autowired
+	private ObjectMapper objectMapper;
+	
+	
+	public static Object readMapper(String json , UserDTO userDTO) {
+		return ObjectMapper.readValue(json, userDTO.getClass());
+		
+	}
+	
+
+}
