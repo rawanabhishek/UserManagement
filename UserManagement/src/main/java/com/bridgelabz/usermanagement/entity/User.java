@@ -1,3 +1,13 @@
+/******************************************************************************
+ 
+ *  Purpose:  A Class  for creating the POJO class Of UserManagement users and 
+ *           this this class uses Entity to get know spring that it is POJO class.
+ *  		 
+ *  @author   Abhishek Rawat
+ *  @version  1.0
+ *  @since    17-12-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.usermanagement.entity;
 
 
@@ -11,6 +21,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -91,5 +102,9 @@ public class User {
 	@JsonIgnoreProperties(value = "user")
 	@OneToMany( fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<LoginHistory> logins;
+	
+
+	@OneToOne
+	private Authentication authSetting;
 
 }

@@ -17,8 +17,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Base64;
+import java.util.Collections;
+
 import java.util.Date;
-import java.util.Optional;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.apache.commons.io.FilenameUtils;
@@ -30,17 +32,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+
 import com.bridgelabz.usermanagement.configuration.UserConfiguration;
+import com.bridgelabz.usermanagement.dto.AuthenticationDTO;
 import com.bridgelabz.usermanagement.dto.LoginDTO;
 import com.bridgelabz.usermanagement.dto.UserDTO;
+import com.bridgelabz.usermanagement.entity.Authentication;
 import com.bridgelabz.usermanagement.entity.LoginHistory;
-import com.bridgelabz.usermanagement.entity.Privilege;
 import com.bridgelabz.usermanagement.entity.User;
 import com.bridgelabz.usermanagement.exception.custom.UserException;
-import com.bridgelabz.usermanagement.repository.PrivilegeRepository;
 import com.bridgelabz.usermanagement.repository.UserRepository;
 import com.bridgelabz.usermanagement.response.Response;
 import com.bridgelabz.usermanagement.utility.CommonFiles;
+import com.bridgelabz.usermanagement.utility.TokenUtility;
+import com.bridgelabz.usermanagement.utility.UserUtility;
 
 @Service
 public class ImplUserService implements IUserService {
@@ -48,8 +53,8 @@ public class ImplUserService implements IUserService {
 	@Autowired
 	private UserRepository userRepository;
 
-	@Autowired
-	private PrivilegeRepository PrivilegeRepository;
+//	@Autowired
+//	private PrivilegeRepository PrivilegeRepository;
 
 	@Autowired
 	private UserConfiguration userConfiguration;
@@ -78,7 +83,7 @@ public class ImplUserService implements IUserService {
 		user.setLastLogin(new Date());
 		userRepository.save(user);
 
-		return new Response(200, CommonFiles.LOGIN_SUCCESS, user);
+		return new Response(200, CommonFiles.LOGIN_SUCCESS, TokenUtility.tokenBuild(user.getEmail()));
 
 	}
 
@@ -240,5 +245,106 @@ public class ImplUserService implements IUserService {
 		return userRepository.findByEmail(email).get();
 
 	}
+
+	@Override
+	public Response loginHistory(String email) {
+		System.out.println("Login history email "+email);
+        User user = userRepository.findByEmail(email).orElse(null);
+		return  new Response(200, CommonFiles.LOGIN_HISTORY_LIST, user.getLogins());
+	}
+
+	@Override
+	public Response latestRegistration(String email) {
+		List<User> user =  userRepository.findAll();
+        Collections.reverse(user);
+		return  new Response(200, CommonFiles.LASTEST_REGISTRATION, user);
+	}
+
+	@Override
+	public Response totalUser(String email) {
+		  User user = userRepository.findByEmail(email).orElse(null);
+		  if (user == null) {
+			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
+		  }
+		  
+		  int count = userRepository.findAll().size();
+		  
+		  
+		  return  new Response(200, CommonFiles.TOTAL_USERS, count);
+	}
+
+	@Override
+	public Response gender(String email) {
+
+		 User user = userRepository.findByEmail(email).orElse(null);
+		  if (user == null) {
+			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
+		  }
+		  
+		  int count = userRepository.findAll().size();
+		  List<User> maleUser = userRepository.findAll().stream().filter(i -> i.getGender().
+				  equals("male")).collect(Collectors.toList());
+		
+		  int malePercentage = maleUser.size()*100/count;
+		
+		  return  new Response(200, CommonFiles.TOTAL_USERS, malePercentage);
+	}
+
+	@Override
+	public Response deleteUser(String email) {
+		User user = userRepository.findByEmail(email).orElse(null);
+		userRepository.delete(user);
+		return new Response(200, CommonFiles.USER_DELETED,user );
+	}
+
+	@Override
+	public Response authenticationSetting(String email, AuthenticationDTO authencticationDto) {
+		 User user = userRepository.findByEmail(email).orElse(null);
+		  if (user == null) {
+			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
+		  }
+		  
+		  Authentication auth = new Authentication();
+		  auth.setRememeberMe(authencticationDto.isRememeberMe());
+		  auth.setForgotPassword(authencticationDto.isForgotPassword());
+		  auth.setName(authencticationDto.getName());
+		  user.setAuthSetting(auth);
+		  
+		return new Response(200, CommonFiles.USER_DELETED,userRepository.save(user) );
+	}
+
+	@Override
+	public Response updateUser(String email, MultipartFile file, UserDTO userDTO) {
+		 User user = userRepository.findByEmail(email).orElse(null);
+		  if (user == null) {
+			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
+		  }
+		  
+		  if (file != null && file.getContentType() != null && !file.getContentType().toLowerCase().startsWith("image"))
+				throw new UserException(CommonFiles.USER_FOUND_FAILED);
+
+			byte[] bytes;
+			try {
+				bytes = file.getBytes();
+				String extension = file.getContentType().replace("image/", "");
+				String fileLocation = CommonFiles.PROFILE_PIC_PATH + user.getEmail() + "." + extension;
+				Path path = Paths.get(fileLocation);
+				Files.write(path, bytes);
+				user.setProfilePicture(fileLocation);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			user = UserUtility.map(userDTO, user);
+
+			userRepository.save(user);
+		  
+		  
+			return new Response(200, CommonFiles.USER_UPDATED,userRepository.save(user) );
+	}
+	
+	
+	
+	
 
 }

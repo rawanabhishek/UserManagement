@@ -1,0 +1,21 @@
+package com.bridgelabz.usermanagement.utility;
+
+public class UserUtility {
+	
+	public static User map(UserDTO userDTO, User user) {
+		user.setFname(userDTO.getFname());
+		user.setMname(userDTO.getMname());
+		user.setLname(userDTO.getLname());
+		user.setDOB(userDTO.getDOB());
+		user.setGender(userDTO.getGender());
+		user.setCountry(userDTO.getCountry());
+		user.setPhone(userDTO.getPhone());
+		user.setEmail(userDTO.getEmail());
+		user.setUsername(userDTO.getUsername());
+		user.setPassword(userDTO.getPassword());
+		user.setRole(userDTO.getRole());
+		user.setPrivileges(userDTO.getPrivileges());
+		return user;
+	}
+
+}

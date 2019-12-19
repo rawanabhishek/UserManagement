@@ -34,6 +34,11 @@ public class CommonFiles {
 	public static final String PROFILE_PIC_PATH = "/home/admin1/MangementUserProject/UserManagement/src/ProfilePictures/";
 	public static final String NO_PROFILE_PIC = "There is no profile pic to update";
 	public static final String PATH_FEATCHED="Profile pic path fetched successfully";
+	public static final String LOGIN_HISTORY_LIST = "Login history fetched successfully";
+	public static final String LASTEST_REGISTRATION = "Latest Registration fetched successfully";
+	public static final String TOTAL_USERS = "Total count of user fetched successfull";
+	public static final String USER_DELETED = "User deleted successfully";
+	public static final String USER_UPDATED = "User updated successfully";
 	
 	
 	//Email Subject messages
@@ -72,6 +77,12 @@ public class CommonFiles {
 	public static final String CONTROLLER_ISVERIFIED_METHOD="Is verified controller method";
 	public static final String GET_ALL_USER = "Users fetched success ";
 	public static final String GET_USER = "User fetched success";
+	public static final String CONTROLLER_UPDATE_METHOD = "Controller update method";
+	
+	
+	
+
+	
 	
 	
 	

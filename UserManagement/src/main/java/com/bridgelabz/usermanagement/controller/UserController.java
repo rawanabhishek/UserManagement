@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.bridgelabz.usermanagement.dto.AuthenticationDTO;
 import com.bridgelabz.usermanagement.dto.LoginDTO;
 import com.bridgelabz.usermanagement.dto.UserDTO;
 import com.bridgelabz.usermanagement.entity.User;
@@ -110,6 +112,28 @@ public class UserController {
 		LOG.info(CommonFiles.CONTROLLER_FORGOTPASSWORD_METHOD);
 		return new ResponseEntity<>(userService.userForgotPassword(email), HttpStatus.OK);
 
+	}
+	
+	
+
+	/**
+	 *  Purpose: Creating a userUpdate controller which will fetch the request
+	 * header and send it to the service.
+	 * @param emailIdToken string containing user email details
+	 * @param json containing the updation string 
+	 * @param file Multipart file containing image
+	 * @return
+	 * @throws JsonMappingException
+	 * @throws JsonProcessingException
+	 */
+	@PutMapping("/updateuser")
+	public ResponseEntity<Response> updateUser(@RequestHeader String emailIdToken,
+			@RequestParam String json, @RequestParam("file") MultipartFile file) throws JsonMappingException, JsonProcessingException {
+		UserDTO userDTO = new UserDTO();
+		userDTO = (UserDTO) JsonUtility.readMapper(json, userDTO);
+		System.out.println(userDTO);
+		LOG.info(CommonFiles.CONTROLLER_UPDATE_METHOD);
+		return new ResponseEntity<>(userService.updateUser(TokenUtility.tokenParser(emailIdToken), file ,userDTO), HttpStatus.OK);
 	}
 
 
@@ -207,20 +231,89 @@ public class UserController {
 	}
 	
 	
+
+	
+	
+
 	/**
-	 * Purpose: To fetch the profile picture of particular collaborator
-	 * @param emailIdToken  for authorization to check the user has authority for Verifying
-	 *              the account.
+	 * Purpose: Creating controller which will fetch the login history list
+	 *          of user
+	 * @param emailIdToken for authorization to check the user has authority to make or access 
+	 *        certain changes 
 	 * @return ResponseEntity which is holding the user object and HttpStatus in
 	 *         that entity.
-	 * @throws IOException
 	 */
-	@GetMapping("/collaboratorprofilepic")
-	public ResponseEntity<Response> getCollaboratorProfilePic(@RequestHeader()
-	String collaboratorEmailId) throws IOException{
-
-     return new ResponseEntity<>(userService.getProfilePic(collaboratorEmailId),HttpStatus.OK);
-}
+	@GetMapping("/loginhistory")
+	public ResponseEntity<Response> loginHistory(@RequestHeader String emailIdToken) {
+		return new ResponseEntity<Response>(userService.loginHistory(TokenUtility.tokenParser(emailIdToken)), HttpStatus.OK);
+	}
+	
+	
+	/**
+	 * Purpose: Creating lastest registration controller which will fetch  the list
+	 *          of user
+	 * @param emailIdToken for authorization to check the user has authority to make or access 
+	 *        certain changes 
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 */
+	@GetMapping("/latestregistration")
+	public ResponseEntity<Response> latestRegistration(@RequestHeader String emailIdToken) {
+		return new ResponseEntity<Response>(userService.latestRegistration(TokenUtility.tokenParser(emailIdToken)), HttpStatus.OK);
+	}
+	
+	
+	/**
+	 * Purpose: Creating Total user controller which will fetch the total count of user
+	 * @param emailIdToken for authorization to check the user has authority to make or access 
+	 *        certain changes 
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 */
+	@GetMapping("/totaluser")
+	public ResponseEntity<Response> totalUser(@RequestHeader String emailIdToken) {
+		return new ResponseEntity<Response>(userService.totalUser(TokenUtility.tokenParser(emailIdToken)), HttpStatus.OK);
+	}
+	
+	/**
+	 * Purpose: Creating gender controller which the send the percentage of male and female
+	 *           from the database
+	 * @param emailIdToken for authorization to check the user has authority to make or access 
+	 *        certain changes 
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 */
+	@GetMapping("/gender")
+	public ResponseEntity<Response> gender(@RequestHeader String emailIdToken) {
+		return new ResponseEntity<Response>(userService.gender(TokenUtility.tokenParser(emailIdToken)), HttpStatus.OK);
+	}
+	
+	
+	/**
+	 * Purpose: Creating Delete user controller which will delete the user form the database
+	 * @param emailIdToken for authorization to check the user has authority to make or access 
+	 *        certain changes 
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 */
+	@DeleteMapping("/deleteuser")
+	public ResponseEntity<Response> deleteUser(String emailIdToken) {
+		return new ResponseEntity<Response>(userService.deleteUser(TokenUtility.tokenParser(emailIdToken)), HttpStatus.OK);
+	}
+	
+	/**
+	 * Purpose: Creating authentication setting controller which will set the authentication setting of users.
+	 * @param emailIdToken for authorization to check the user has authority to make or access 
+	 *        certain changes 
+	 * @param authentication
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 */
+	@PutMapping("/authenticationsetting")
+	public ResponseEntity<Response> authSetting(@RequestHeader String emailIdToken,
+			@RequestBody AuthenticationDTO authentication) {
+		return new ResponseEntity<Response>(userService.authenticationSetting(TokenUtility.tokenParser(emailIdToken), authentication), HttpStatus.OK);
+	}
 	
 	
 

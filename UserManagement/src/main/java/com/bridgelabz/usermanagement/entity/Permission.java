@@ -1,3 +1,13 @@
+/******************************************************************************
+ 
+ *  Purpose:  A Class  for creating the POJO class Of UserManagement Permission and 
+ *           this this class uses Entity to get know spring that it is POJO class.
+ *  		 
+ *  @author   Abhishek Rawat
+ *  @version  1.0
+ *  @since    17-12-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.usermanagement.entity;
 
 
