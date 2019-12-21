@@ -14,7 +14,7 @@ package com.bridgelabz.usermanagement.controller;
 
 import java.io.IOException;
 
-import javax.validation.Valid;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +33,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
 
 import com.bridgelabz.usermanagement.dto.AuthenticationDTO;
 import com.bridgelabz.usermanagement.dto.LoginDTO;
@@ -70,7 +71,7 @@ public class UserController {
 	 * 
 	 */
 	@PutMapping("/login")
-	public ResponseEntity<Response> userLogin(@Valid @RequestBody LoginDTO login) {
+	public ResponseEntity<Response> userLogin(@RequestBody LoginDTO login) {
 		
 		LOG.info(CommonFiles.CONTROLLER_LOGIN_METHOD);
 		return new ResponseEntity<>(userService.userLogin(login), HttpStatus.OK);
@@ -112,6 +113,24 @@ public class UserController {
 		LOG.info(CommonFiles.CONTROLLER_FORGOTPASSWORD_METHOD);
 		return new ResponseEntity<>(userService.userForgotPassword(email), HttpStatus.OK);
 
+	}
+	
+	/**
+	 * Purpose: Creating a setPassword controller which will fetch the request body
+	 * and send it to the service.
+	 * 
+	 * @param password  containing the user new password.
+	 * @param tokenfor       authorization to check the user has authority for to
+	 *                       setPassword.
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 * 
+	 */
+	@PutMapping("/setpassword")
+	public ResponseEntity<Response> userSetPassword(@RequestParam String password ,@RequestHeader String token) {
+
+		LOG.info(CommonFiles.CONTROLLER_SETPASSWORD_METHOD);
+		return new ResponseEntity<>(new Response(200, CommonFiles.SET_PASSWORD_SUCCESS,userService.userSetPassword(password ,TokenUtility.tokenParser(token))), HttpStatus.OK);
 	}
 	
 	

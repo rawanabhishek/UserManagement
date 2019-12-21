@@ -22,7 +22,7 @@ public class CommonFiles {
 	public static final String REGISTER_EMAIL_FOUND=" emailId already existed";
 	public static final String REGISTER_SUCCESS="Registeration Successful";
 	public static final String EMAIL_SUCCESS="Email send to the user successfully";
-	public static final String EMAIL_FAILED="no user found with this email id ";
+	public static final String EMAIL_FAILED="no user found with  email id ";
 	public static final String SET_PASSWORD_FAILED="unable to set the password";
 	public static final String SET_PASSWORD_SUCCESS="Password set successfully";
 	public static final String USER_NOT_VERIFIED="User not verified";
@@ -44,6 +44,8 @@ public class CommonFiles {
 	//Email Subject messages
 	public static final String EMAIL_SUBJECT_SETPASSWORD="Link For resetting password";
 	public static final String EMAIL_SUBJECT_VERIFY="Verification mail for user Authorization";
+	
+	
 	
 	//token key message
 	public static final String TOKEN_KEY="secretKey";

@@ -28,7 +28,8 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -58,6 +59,9 @@ public class ImplUserService implements IUserService {
 
 	@Autowired
 	private UserConfiguration userConfiguration;
+	
+	@Autowired
+	private JavaMailSender emailSender;
 
 	@Autowired
 	private ModelMapper modelMapper;
@@ -67,7 +71,7 @@ public class ImplUserService implements IUserService {
 	@Override
 	public Response userLogin(LoginDTO loginDTO) {
 		LOG.info(CommonFiles.SERVICE_LOGIN_METHOD);
-
+System.out.println(loginDTO.getPassword()+"password"+loginDTO.getUserName()+"userName");
 		User user = userRepository.findByUserName(loginDTO.getUserName()).orElse(null);
 		if (user == null) {
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
@@ -129,14 +133,38 @@ public class ImplUserService implements IUserService {
 	public Response userForgotPassword(String email) {
 		LOG.info(CommonFiles.SERVICE_FORGOTPASSWORD_METHOD);
 
-		if (userRepository.findByEmail(email) == null) {
-			throw new UserException(email + CommonFiles.EMAIL_FAILED);
-
+		if (userRepository.findByEmail(email).isEmpty()) {
+			throw new UserException( CommonFiles.EMAIL_FAILED+" "+email );
+          
 		}
+		
+		 
+        SimpleMailMessage message = new SimpleMailMessage(); 
+        message.setTo(email); 
+        message.setSubject(CommonFiles.EMAIL_SUBJECT_SETPASSWORD); 
+        message.setText(CommonFiles.SET_PASSWORD_URL + TokenUtility.tokenBuild(email));
+        emailSender.send(message);
+        
+		
+		
 
 		return new Response(200, CommonFiles.EMAIL_SUCCESS, true);
 
 	}
+	
+	@Override
+	public User userSetPassword(String password, String email) {
+		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(email))
+				.findAny().orElse(null);
+		
+		if (user == null ) {
+			throw new UserException(CommonFiles.SET_PASSWORD_FAILED);
+		}
+		
+		user.setPassword(userConfiguration.passwordEncoder().encode(password));
+
+		return userRepository.save(user);
+	}	
 
 	@Override
 	public User addProfilePic(String email, MultipartFile file) throws IOException {
@@ -342,6 +370,8 @@ public class ImplUserService implements IUserService {
 		  
 			return new Response(200, CommonFiles.USER_UPDATED,userRepository.save(user) );
 	}
+
+	
 	
 	
 	

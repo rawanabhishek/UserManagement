@@ -69,7 +69,13 @@ public interface IUserService {
 	
 	
 
-
+     /**: Method for resetting user password
+     * Purpose
+     * @param password uers new password
+     * @param email of user which we have to reset the password
+     * @return
+     */
+    public User userSetPassword(String password, String email);
 	
 	
 
