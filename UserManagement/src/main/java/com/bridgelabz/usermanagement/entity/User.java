@@ -26,6 +26,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -83,12 +85,16 @@ public class User {
 
 	private boolean status;
 	
+	private boolean online;
+	
 
 	private String profilePicture;
 	
+	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdDate;
 	
+	@UpdateTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedDate;
 	

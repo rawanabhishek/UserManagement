@@ -77,6 +77,26 @@ public class UserController {
 		return new ResponseEntity<>(userService.userLogin(login), HttpStatus.OK);
 
 	}
+	
+	/**
+	 * Purpose: Creating a userLogout controller which will fetch the request body
+	 * and send it to the service.
+	 * 
+	 * @param lo object containing user login credentials.
+	 * @return ResponseEntity which is holding the user object and HttpStatus in
+	 *         that entity.
+	 * 
+	 */
+	@PutMapping("/logout")
+	public ResponseEntity<Response> userLogout(@RequestHeader String  emailIdToken) {
+		
+		LOG.info(CommonFiles.CONTROLLER_LOGOUT_METHOD);
+		return new ResponseEntity<>(userService.userLogout(TokenUtility.tokenParser(emailIdToken)), HttpStatus.OK);
+
+	}
+	
+	
+	
 
 	/**
 	 * Purpose: Creating a userRegister controller which will fetch the request body
@@ -221,6 +241,8 @@ public class UserController {
 	@GetMapping("/profilepic")
 	public ResponseEntity<Response> getProfilePic(@RequestHeader()
 	String emailIdToken) throws IOException{
+		
+		System.out.println("get user proflie picture");
 
      return new ResponseEntity<>(userService.getProfilePic(TokenUtility.tokenParser(emailIdToken)),HttpStatus.OK);
 }
@@ -244,7 +266,7 @@ public class UserController {
 	 *         that entity.
 	 */
 	@GetMapping("/userbyid")
-	public User getUser(@RequestParam String emailIdToken){
+	public User getUser(@RequestHeader String emailIdToken){
 		System.out.println("get user by id controller");
 		return  userService.getUser(TokenUtility.tokenParser(emailIdToken));
 	}

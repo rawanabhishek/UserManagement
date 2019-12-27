@@ -42,6 +42,14 @@ public interface IUserService {
 	public Response userLogin(LoginDTO login);
 	
 	
+	/**
+	 *Purpose: Method for user logout
+	 * @param email of user which is needed to be logout
+	 * @return
+	 */
+	public Response userLogout(String email);
+	
+	
 	
 
 	/**

@@ -39,6 +39,7 @@ public class CommonFiles {
 	public static final String TOTAL_USERS = "Total count of user fetched successfull";
 	public static final String USER_DELETED = "User deleted successfully";
 	public static final String USER_UPDATED = "User updated successfully";
+	public static final String LOGOUT_SUCCESS = "Logout sucessfull";
 	
 	
 	//Email Subject messages
@@ -80,6 +81,8 @@ public class CommonFiles {
 	public static final String GET_ALL_USER = "Users fetched success ";
 	public static final String GET_USER = "User fetched success";
 	public static final String CONTROLLER_UPDATE_METHOD = "Controller update method";
+	public static final String CONTROLLER_LOGOUT_METHOD = "Controller logout method";
+
 	
 	
 	
