@@ -245,8 +245,7 @@ public class ImplUserService implements IUserService {
 		}else {
 			 System.out.println("fetching user profile");
 			 User adminUser=userRepository.findByEmail(email).orElse(null);
-			 System.out.println("admin role"+ adminUser.getRole());
-			 if(!adminUser.getRole().equals("admin")) {
+			 if(adminUser.getRole() != "Admin") {
 				 throw new UserException(CommonFiles.USER_AUTHORITY);
 			 }
 			 user = userRepository.findByEmail(userEmail).orElse(null);

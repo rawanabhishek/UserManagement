@@ -56,8 +56,8 @@
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.UserDTO"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.utility.UserUtility"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.utility.TokenUtility"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.UpdateTimestamp"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.utility.TokenUtility"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
 </qualifiedTypeNameHistroy>

@@ -237,28 +237,12 @@ public class ImplUserService implements IUserService {
 	}
 
 	@Override
-	public Response getProfilePic(String email , String userEmail) {
-		
-         User user = new User();
-		if(userEmail == "user") {
-			 user = userRepository.findByEmail(email).orElse(null);
-		}else {
-			 System.out.println("fetching user profile");
-			 User adminUser=userRepository.findByEmail(email).orElse(null);
-			 System.out.println("admin role"+ adminUser.getRole());
-			 if(!adminUser.getRole().equals("admin")) {
-				 throw new UserException(CommonFiles.USER_AUTHORITY);
-			 }
-			 user = userRepository.findByEmail(userEmail).orElse(null);
-		}
-	
+	public Response getProfilePic(String email) {
+
+		User user = userRepository.findByEmail(email).orElse(null);
 		if (user == null) {
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
 		}
-		
-		
-		
-		
 		String profilePic = "";
 		String filePath = CommonFiles.PROFILE_PIC_PATH;
 		File fileFolder = new File(filePath);
@@ -288,9 +272,6 @@ public class ImplUserService implements IUserService {
 		return new Response(200, CommonFiles.PATH_FEATCHED, profilePic);
 
 	}
-	
-	
-
 
 	@Override
 	public Response getAllUser() {
@@ -402,8 +383,6 @@ public class ImplUserService implements IUserService {
 		  
 			return new Response(200, CommonFiles.USER_UPDATED,userRepository.save(user) );
 	}
-
-	
 
 
 	

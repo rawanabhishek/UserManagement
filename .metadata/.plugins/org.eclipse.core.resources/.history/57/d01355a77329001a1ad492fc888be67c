@@ -256,8 +256,8 @@ public class UserController {
 	 * @throws IOException
 	 */
 	@GetMapping("/profilepicusers")
-	public ResponseEntity<Response> getProfilePicUsers(@RequestHeader
-	String emailIdToken ,@RequestHeader String userEmail) throws IOException{
+	public ResponseEntity<Response> getProfilePicUsers(@RequestHeader()
+	String emailIdToken , String userEmail) throws IOException{
 		
 		System.out.println("get users proflie picture");
 

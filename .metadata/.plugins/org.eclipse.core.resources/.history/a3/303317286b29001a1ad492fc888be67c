@@ -238,18 +238,11 @@ public class ImplUserService implements IUserService {
 
 	@Override
 	public Response getProfilePic(String email , String userEmail) {
-		
          User user = new User();
 		if(userEmail == "user") {
 			 user = userRepository.findByEmail(email).orElse(null);
 		}else {
-			 System.out.println("fetching user profile");
-			 User adminUser=userRepository.findByEmail(email).orElse(null);
-			 System.out.println("admin role"+ adminUser.getRole());
-			 if(!adminUser.getRole().equals("admin")) {
-				 throw new UserException(CommonFiles.USER_AUTHORITY);
-			 }
-			 user = userRepository.findByEmail(userEmail).orElse(null);
+		 user = userRepository.findByEmail(userEmail).orElse(null);
 		}
 	
 		if (user == null) {

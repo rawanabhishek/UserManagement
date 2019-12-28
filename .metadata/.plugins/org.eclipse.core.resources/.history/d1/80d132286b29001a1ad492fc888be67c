@@ -231,7 +231,7 @@ public class UserController {
 	
 	
 	/**
-	 * Purpose: To fetch the profile picture of particular user
+	 * Purpose: To fetch the profile picture of particular users
 	 * @param emailIdToken  for authorization to check the user has authority for Verifying
 	 *              the account.
 	 * @return ResponseEntity which is holding the user object and HttpStatus in
@@ -244,24 +244,7 @@ public class UserController {
 		
 		System.out.println("get user proflie picture");
 
-     return new ResponseEntity<>(userService.getProfilePic(TokenUtility.tokenParser(emailIdToken) , "user"),HttpStatus.OK);
-}
-	
-	/**
-	 * Purpose: To fetch the profile picture of particular users
-	 * @param emailIdToken  for authorization to check the user has authority for Verifying
-	 *              the account.
-	 * @return ResponseEntity which is holding the user object and HttpStatus in
-	 *         that entity.
-	 * @throws IOException
-	 */
-	@GetMapping("/profilepicusers")
-	public ResponseEntity<Response> getProfilePicUsers(@RequestHeader
-	String emailIdToken ,@RequestHeader String userEmail) throws IOException{
-		
-		System.out.println("get users proflie picture");
-
-     return new ResponseEntity<>(userService.getProfilePic(TokenUtility.tokenParser(emailIdToken) , userEmail),HttpStatus.OK);
+     return new ResponseEntity<>(userService.getProfilePic(TokenUtility.tokenParser(emailIdToken)),HttpStatus.OK);
 }
 	
 	/**

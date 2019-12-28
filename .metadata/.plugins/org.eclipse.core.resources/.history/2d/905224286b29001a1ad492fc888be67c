@@ -127,9 +127,7 @@ public interface IUserService {
 	 *              access the userServices.
 	 * @return Response which contains the response of the method
 	 */
-	public Response getProfilePic(String email , String userEmail);
-	
-
+	public Response getProfilePic(String email);
 	
 	/**
 	 * Purpose: Method for getting all user present in the database

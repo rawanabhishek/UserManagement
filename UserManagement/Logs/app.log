@@ -1,548 +1,736 @@
-2019-12-27 10:11:01.147  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 4615 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
-2019-12-27 10:11:01.177  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
-2019-12-27 10:11:01.430  INFO 4615 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
-2019-12-27 10:11:01.432  INFO 4615 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-12-27 10:11:01.432  INFO 4615 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-12-27 10:11:03.747  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2019-12-27 10:11:03.848  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 3 JPA repository interfaces.
-2019-12-27 10:11:04.294  INFO 4615 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 10:11:04.752  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2019-12-27 10:11:04.758  INFO 4615 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-27 10:11:04.759  INFO 4615 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2019-12-27 10:11:04.840  INFO 4615 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-27 10:11:04.841  INFO 4615 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3408 ms
-2019-12-27 10:11:05.179  INFO 4615 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2019-12-27 10:11:05.377  INFO 4615 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2019-12-27 10:11:05.772  INFO 4615 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2019-12-27 10:11:06.017  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-12-27 10:11:06.542  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-12-27 10:11:06.604  INFO 4615 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-12-27 10:11:08.104  INFO 4615 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2019-12-27 10:11:08.109  INFO 4615 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 10:11:08.183  INFO 4615 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-12-27 10:11:09.022  WARN 4615 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-12-27 10:11:09.276  INFO 4615 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2019-12-27 10:11:09.419  INFO 4615 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 10:11:09.602  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-12-27 10:11:09.659  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-12-27 10:11:09.674  INFO 4615 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-12-27 10:11:09.939  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2019-12-27 10:11:09.941  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 9.457 seconds (JVM running for 11.255)
-2019-12-27 10:11:25.467  INFO 4615 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-27 10:11:25.467  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-27 10:11:25.474  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2019-12-27 10:11:25.708  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:24:43.299  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:26:02.906  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:26:59.077  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:28:03.870  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:29:01.979  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:29:32.024  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:29:46.654  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:30:31.859  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:31:34.722  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:32:03.693  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:32:53.660  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:36:43.289  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:38:08.649  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:38:19.056  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:39:12.758  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:39:24.488  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:40:54.788  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:41:12.103  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:42:31.629  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:44:36.505  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:45:31.020  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:47:55.377  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:50:09.927  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:50:09.941  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:50:25.900  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:50:59.109  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:52:03.250  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:53:25.801  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:54:07.887  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:56:06.949  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 10:58:14.734  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:04:34.943  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:04:59.991  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:05:32.557  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:05:46.862  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:06:16.781  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:07:00.941  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:07:26.523  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:07:54.193  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:08:54.186  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:09:07.546  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:09:15.908  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:09:56.711  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:11:08.710  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:12:00.641  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:12:19.657  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:12:26.970  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:13:06.477  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:17:47.792  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:18:12.770  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:20:49.722  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:20:51.571  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:22:23.473  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:23:13.699  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:23:27.794  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:27:12.436  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:27:28.610  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:27:41.032  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:28:06.440  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:28:08.295  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:28:37.933  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:28:53.027  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:29:02.421  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:33:19.707  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:33:25.711  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:34:00.791  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:34:20.659  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:36:53.919  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:37:34.784  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:38:15.776  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:38:40.874  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:39:53.689  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:41:57.964  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:42:15.634  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:43:29.243  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:43:32.690  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:44:18.841  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:44:31.143  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:44:47.635  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:45:36.289  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:45:56.955  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:46:43.676  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:52:20.745  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:52:53.090  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:53:29.716  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:55:04.429  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:55:57.243  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 11:56:57.755  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:01:35.694  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:04:21.697  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:05:39.889  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:07:13.993  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:07:22.245  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:07:42.391  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:09:33.741  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:11:05.708  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:11:16.949  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:12:48.732  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:13:14.666  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:14:05.348  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:17:30.891  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:17:56.886  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:18:06.351  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:18:18.517  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:18:33.590  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:18:48.405  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:18:50.707  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:19:12.181  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:19:45.472  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:19:55.273  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:19:57.857  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:20:12.505  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:20:30.366  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:21:50.240  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:22:00.663  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:22:39.363  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:23:33.569  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:24:27.275  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:24:48.224  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:25:11.721  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:25:44.837  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:26:54.731  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:26:57.226  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:27:12.565  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:41:34.699  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:41:42.871  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:41:51.783  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:42:04.281  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:45:55.044  INFO 4615 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-27 12:45:55.046  INFO 4615 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 12:45:55.108  INFO 4615 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-12-27 12:45:55.120  INFO 4615 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-12-27 12:45:55.935  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 4615 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
-2019-12-27 12:45:55.936  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
-2019-12-27 12:45:56.641  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2019-12-27 12:45:56.649  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 3 JPA repository interfaces.
-2019-12-27 12:45:56.728  INFO 4615 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 12:45:56.760  WARN 4615 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
-2019-12-27 12:45:56.801  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2019-12-27 12:45:56.802  INFO 4615 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-27 12:45:56.802  INFO 4615 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2019-12-27 12:45:56.837  INFO 4615 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-27 12:45:56.837  INFO 4615 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 899 ms
-2019-12-27 12:45:56.878  INFO 4615 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2019-12-27 12:45:56.883  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2019-12-27 12:45:56.923  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2019-12-27 12:45:56.923  INFO 4615 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-12-27 12:45:59.034  INFO 4615 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2019-12-27 12:45:59.034  INFO 4615 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 12:45:59.044  INFO 4615 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-12-27 12:45:59.059  WARN 4615 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/home/admin1/MangementUserProject/UserManagement/target/classes/com/bridgelabz/usermanagement/controller/UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bridgelabz.usermanagement.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameterList
-
-2019-12-27 12:45:59.059  INFO 4615 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 12:45:59.060  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2019-12-27 12:45:59.062  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2019-12-27 12:45:59.062  INFO 4615 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-12-27 12:45:59.107  INFO 4615 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-12-27 12:45:59.331 ERROR 4615 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/home/admin1/MangementUserProject/UserManagement/target/classes/com/bridgelabz/usermanagement/controller/UserController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bridgelabz.usermanagement.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameterList
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-	at com.bridgelabz.usermanagement.Application.main(Application.java:21) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.3.BUILD-SNAPSHOT.jar:2.2.3.BUILD-SNAPSHOT]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bridgelabz.usermanagement.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameterList
-
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameterList
-
-	at com.bridgelabz.usermanagement.controller.UserController.<init>(UserController.java:91) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:200) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 24 common frames omitted
-
-2019-12-27 12:52:18.461  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 4615 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
-2019-12-27 12:52:18.462  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
-2019-12-27 12:52:18.623  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2019-12-27 12:52:18.631  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 3 JPA repository interfaces.
-2019-12-27 12:52:18.672  INFO 4615 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 12:52:18.698  WARN 4615 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
-2019-12-27 12:52:18.713  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2019-12-27 12:52:18.714  INFO 4615 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-27 12:52:18.714  INFO 4615 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2019-12-27 12:52:18.737  INFO 4615 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2019-12-27 12:52:18.737  INFO 4615 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 274 ms
-2019-12-27 12:52:18.768  INFO 4615 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2019-12-27 12:52:18.772  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2019-12-27 12:52:18.830  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2019-12-27 12:52:18.831  INFO 4615 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-12-27 12:52:19.644  INFO 4615 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2019-12-27 12:52:19.644  INFO 4615 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 12:52:19.655  INFO 4615 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-12-27 12:52:19.818  WARN 4615 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-12-27 12:52:19.898  INFO 4615 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2019-12-27 12:52:19.946  INFO 4615 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 12:52:20.013  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-12-27 12:52:20.013  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-12-27 12:52:20.018  INFO 4615 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-12-27 12:52:20.063  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2019-12-27 12:52:20.064  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.622 seconds (JVM running for 9681.378)
-2019-12-27 12:52:20.067  INFO 4615 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-12-27 12:58:07.358  INFO 4615 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-27 12:58:07.359  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-27 12:58:07.362  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2019-12-27 12:58:07.412  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:58:24.217  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:58:40.529  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:59:12.587  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 12:59:59.137  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:01:49.679  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:03:07.586  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:03:09.967  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:03:56.430  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:04:33.971  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:04:51.159  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:04:56.450  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:05:02.247  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:05:08.291  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:05:10.501  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:05:43.237  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:06:12.210  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:26:11.877  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:26:37.183  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:26:59.055  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:28:42.020  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:30:39.896  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:34:17.723  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:34:23.267  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:34:58.464  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:35:29.444  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 13:37:00.138  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:25:24.076  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:25:47.821  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:26:13.782  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:26:35.290  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:27:28.894  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:27:36.000  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:28:38.815  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:29:18.921  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:29:41.045  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:29:48.878  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:30:16.807  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:30:25.513  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:30:41.184  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:30:55.436  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:34:32.856  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:35:28.356  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:35:37.870  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 14:35:43.309  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 15:38:52.218  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:17:15.204  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:18:00.991  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:25:08.858  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:26:10.928  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:33:27.232  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:35:17.519  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:36:41.935  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:36:44.486  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:36:49.348  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:37:41.651  INFO 4615 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-27 16:37:41.652  INFO 4615 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 16:37:41.653  INFO 4615 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2019-12-27 16:37:41.655  INFO 4615 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2019-12-27 16:37:43.758  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 4615 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
-2019-12-27 16:37:43.759  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
-2019-12-27 16:37:45.540  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2019-12-27 16:37:45.649  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 3 JPA repository interfaces.
-2019-12-27 16:37:45.818  INFO 4615 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 16:37:45.861  WARN 4615 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
-2019-12-27 16:37:46.083  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2019-12-27 16:37:46.084  INFO 4615 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-27 16:37:46.084  INFO 4615 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2019-12-27 16:37:46.280  INFO 4615 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2019-12-27 16:37:46.280  INFO 4615 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2520 ms
-2019-12-27 16:37:46.357  INFO 4615 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2019-12-27 16:37:46.365  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2019-12-27 16:37:46.955  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2019-12-27 16:37:46.956  INFO 4615 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-12-27 16:37:48.629  INFO 4615 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2019-12-27 16:37:48.648  INFO 4615 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 16:37:48.660  INFO 4615 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-12-27 16:37:48.816  WARN 4615 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-12-27 16:37:48.882  INFO 4615 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2019-12-27 16:37:48.919  INFO 4615 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 16:37:48.977  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-12-27 16:37:48.978  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-12-27 16:37:48.980  INFO 4615 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-12-27 16:37:49.014  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2019-12-27 16:37:49.014  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 5.712 seconds (JVM running for 23210.329)
-2019-12-27 16:37:49.016  INFO 4615 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-12-27 16:38:16.507  INFO 4615 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-27 16:38:16.509  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-27 16:38:16.512  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2019-12-27 16:38:16.524  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:38:37.349  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:39:43.959  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:39:55.841  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:41:06.097  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:41:29.474  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:43:01.774  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:44:51.033  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:46:20.723  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:46:45.211  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:46:48.085  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:48:04.125  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:48:42.436  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:49:27.552  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:49:57.921  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:51:44.018  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 16:52:05.573  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:08:57.422  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:09:03.917  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:09:22.090  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:09:22.140  WARN 4615 --- [http-nio-8084-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
-	The method setOnline(boolean) is undefined for the type User
-]
-2019-12-27 17:09:28.770  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:09:28.770  WARN 4615 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
-	The method setOnline(boolean) is undefined for the type User
-]
-2019-12-27 17:09:39.479  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:09:39.479  WARN 4615 --- [http-nio-8084-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
-	The method setOnline(boolean) is undefined for the type User
-]
-2019-12-27 17:09:45.628  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:09:45.628  WARN 4615 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
-	The method setOnline(boolean) is undefined for the type User
-]
-2019-12-27 17:10:34.165  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:10:34.165  WARN 4615 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
-	The method setOnline(boolean) is undefined for the type User
-]
-2019-12-27 17:11:30.064  INFO 4615 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-27 17:11:30.065  INFO 4615 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 17:11:30.066  INFO 4615 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2019-12-27 17:11:30.069  INFO 4615 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2019-12-27 17:11:30.528  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 4615 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
-2019-12-27 17:11:30.528  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
-2019-12-27 17:11:31.537  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2019-12-27 17:11:31.547  INFO 4615 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 3 JPA repository interfaces.
-2019-12-27 17:11:31.614  INFO 4615 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-27 17:11:31.645  WARN 4615 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
-2019-12-27 17:11:31.692  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2019-12-27 17:11:31.692  INFO 4615 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-27 17:11:31.693  INFO 4615 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2019-12-27 17:11:31.746  INFO 4615 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2019-12-27 17:11:31.746  INFO 4615 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1214 ms
-2019-12-27 17:11:31.788  INFO 4615 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2019-12-27 17:11:31.793  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2019-12-27 17:11:32.107  INFO 4615 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2019-12-27 17:11:32.108  INFO 4615 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-12-27 17:11:34.023  INFO 4615 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2019-12-27 17:11:34.023  INFO 4615 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-27 17:11:34.035  INFO 4615 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-12-27 17:11:34.157  WARN 4615 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-12-27 17:11:34.205  INFO 4615 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2019-12-27 17:11:34.232  INFO 4615 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-27 17:11:34.270  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-12-27 17:11:34.270  INFO 4615 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-12-27 17:11:34.273  INFO 4615 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-12-27 17:11:34.308  INFO 4615 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2019-12-27 17:11:34.308  INFO 4615 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 3.933 seconds (JVM running for 25235.622)
-2019-12-27 17:11:34.309  INFO 4615 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-12-27 17:11:42.991  INFO 4615 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-27 17:11:42.991  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-27 17:11:42.993  INFO 4615 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2019-12-27 17:11:42.995  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:11:42.995  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:11:43.138  WARN 4615 --- [http-nio-8084-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: logging failed]
-2019-12-27 17:11:54.966  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:11:54.966  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:11:55.066  WARN 4615 --- [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: logging failed]
-2019-12-27 17:12:25.724  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:12:25.724  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:12:25.826  WARN 4615 --- [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: logging failed]
-2019-12-27 17:12:50.201  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:12:50.201  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:12:50.214  WARN 4615 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
-2019-12-27 17:12:57.712  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:12:57.712  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:12:57.714  WARN 4615 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
-2019-12-27 17:13:24.044  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:13:24.045  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:13:24.046  WARN 4615 --- [http-nio-8084-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
-2019-12-27 17:13:32.118  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:13:32.118  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:13:32.218  WARN 4615 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: logging failed]
-2019-12-27 17:14:16.164  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:14:16.164  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:14:32.433  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:14:32.433  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:16:07.121  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:16:43.023  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:16:43.023  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:16:43.154  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:16:47.110  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:16:49.854  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:17:41.396  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:17:41.396  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:17:41.498  WARN 4615 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: logging failed]
-2019-12-27 17:17:47.556  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:17:47.556  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:17:47.688  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:18:08.188  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:18:08.188  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:18:08.313  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:18:31.967  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.controller.UserController          : Controller logout method
-2019-12-27 17:18:38.469  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:18:48.779  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.controller.UserController          : Login controller method
-2019-12-27 17:18:48.779  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : Login service method
-2019-12-27 17:18:48.912  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:20:47.371  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:20:49.264  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:21:44.990  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:22:12.589  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:22:15.400  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:22:39.763  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:22:41.678  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:22:58.304  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:23:19.355  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:23:30.816  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:24:32.232  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:24:45.415  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:25:45.764  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:25:56.646  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:26:11.537  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:26:55.154  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:27:48.761  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:28:21.264  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:28:31.963  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:29:29.899  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:30:36.738  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:33:58.842  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:34:09.382  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:35:55.628  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:36:28.456  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:36:54.176  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:37:31.249  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:37:55.104  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:38:24.697  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:38:33.985  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:38:41.182  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:38:45.654  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:38:56.270  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:40:32.664  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:41:40.003  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:43:15.417  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:45:50.520  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:56:19.539  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 17:56:53.159  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:26:35.968  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:28:24.260  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:29:15.147  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:31:10.309  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:35:11.467  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:36:57.221  INFO 4615 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:37:02.090  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:37:14.334  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:37:23.921  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:37:33.608  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:38:24.486  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:38:54.484  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:39:41.210  INFO 4615 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:40:15.271  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:41:19.945  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:51:55.913  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:52:35.811  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:52:49.493  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:53:04.624  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:54:48.230  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 18:54:51.510  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:02:38.283  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:03:12.084  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:04:58.814  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:05:01.587  INFO 4615 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:05:04.414  INFO 4615 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:05:25.572  INFO 4615 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:05:27.815  INFO 4615 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:06:26.304  INFO 4615 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:08:02.980  INFO 4615 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:08:06.509  INFO 4615 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
-2019-12-27 19:10:58.160  INFO 4615 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 09:07:48.484  INFO 4206 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 4206 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 09:07:49.098  INFO 4206 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 09:07:49.479  INFO 4206 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-28 09:07:49.479  INFO 4206 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-28 09:07:49.480  INFO 4206 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-28 09:07:53.390  INFO 4206 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 09:07:53.529  INFO 4206 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123ms. Found 3 JPA repository interfaces.
+2019-12-28 09:07:54.116  INFO 4206 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 09:07:54.670  INFO 4206 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 09:07:54.680  INFO 4206 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 09:07:54.681  INFO 4206 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 09:07:54.807  INFO 4206 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 09:07:54.807  INFO 4206 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5327 ms
+2019-12-28 09:07:55.658  INFO 4206 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 09:07:56.275  INFO 4206 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-28 09:07:57.751  INFO 4206 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-28 09:07:58.498  INFO 4206 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-28 09:07:59.318  INFO 4206 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-28 09:07:59.461  INFO 4206 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 09:08:02.679  INFO 4206 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 09:08:02.683  INFO 4206 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 09:08:02.769  INFO 4206 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 09:08:03.871  WARN 4206 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 09:08:04.178  INFO 4206 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 09:08:04.403  INFO 4206 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 09:08:04.651  INFO 4206 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 09:08:04.825  INFO 4206 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 09:08:04.839  INFO 4206 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 09:08:05.186  INFO 4206 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 09:08:05.188  INFO 4206 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 19.438 seconds (JVM running for 24.726)
+2019-12-28 09:43:50.712  INFO 4206 --- [http-nio-8084-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 09:43:50.713  INFO 4206 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 09:43:50.721  INFO 4206 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-12-28 09:43:51.086  INFO 4206 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:00:55.266  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:01:01.421  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:02:28.795  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:06:07.049  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:06:31.658  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:06:41.203  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:07:00.166  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:07:09.998  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:08:23.064  INFO 4206 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:08:35.284  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:09:13.037  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:09:27.988  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:09:30.307  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:09:35.144  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:09:37.029  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:09:46.403  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:10:01.281  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:10:08.662  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:10:24.160  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:10:34.512  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:10:45.957  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:10:58.313  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:13:24.274  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:13:27.111  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:13:41.901  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:13:43.320  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:13:59.368  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:14:03.982  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:14:17.000  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:14:49.567  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:14:58.864  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:19:33.882  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:22:53.961  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:23:09.838  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:25:23.201  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:27:51.501  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:27:54.939  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:28:50.920  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:29:16.940  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:29:26.367  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:30:05.192  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:30:46.738  INFO 4206 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:31:02.700  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:31:42.135  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:32:14.357  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:33:25.518  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:33:55.468  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:34:11.363  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:34:24.936  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:34:34.108  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:39:43.876  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:53:00.742  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:53:51.219  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:54:21.522  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 10:54:36.446  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:05:34.994  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:08:23.798  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:08:54.743  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:15:52.013  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:17:47.469  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:19:25.979  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:20:25.264  INFO 4206 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:21:32.886  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:23:54.913  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:26:17.916  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:27:56.187  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:28:16.609  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:28:20.173  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:28:30.942  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:28:38.789  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:28:47.146  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:29:00.732  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:29:09.339  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:29:18.392  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:29:35.385  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:29:46.837  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:32:32.953  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:39:27.972  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:39:47.519  INFO 4206 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:40:38.059  INFO 4206 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:43:21.313  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:43:33.261  INFO 4206 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:48:34.028  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:49:02.209  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:50:24.898  INFO 4206 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:50:42.056  INFO 4206 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:51:20.911  INFO 4206 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:52:58.966  INFO 4206 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:53:33.405  INFO 4206 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:54:02.926  INFO 4206 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 11:54:32.674  INFO 4206 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:09:47.193  INFO 4206 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:12:01.536  INFO 4206 --- [RMI TCP Connection(39)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-28 12:12:01.555  INFO 4206 --- [RMI TCP Connection(39)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 12:12:01.561  INFO 4206 --- [RMI TCP Connection(39)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 12:12:01.670  INFO 4206 --- [RMI TCP Connection(39)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-28 12:12:01.713  INFO 4206 --- [RMI TCP Connection(39)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-28 12:12:25.911  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 12:12:25.921  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 12:12:26.045  INFO 10884 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/admin1/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-28 12:12:26.046  INFO 10884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-28 12:12:26.047  INFO 10884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-28 12:12:28.726  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 12:12:28.824  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 3 JPA repository interfaces.
+2019-12-28 12:12:29.240  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 12:12:29.833  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 12:12:29.839  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 12:12:29.839  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 12:12:29.972  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 12:12:29.972  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3925 ms
+2019-12-28 12:12:30.333  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 12:12:30.516  INFO 10884 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-28 12:12:30.934  INFO 10884 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-28 12:12:31.153  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-28 12:12:31.735  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-28 12:12:31.796  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 12:12:34.476  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 12:12:34.480  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 12:12:34.555  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 12:12:35.362  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 12:12:35.574  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 12:12:35.823  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 12:12:36.004  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 12:12:36.062  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 12:12:36.076  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 12:12:36.362  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 12:12:36.364  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 12.806 seconds (JVM running for 16.345)
+2019-12-28 12:12:58.938  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 12:12:58.938  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 12:12:58.947  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-12-28 12:14:56.785  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "dashBoard" (class com.bridgelabz.usermanagement.entity.Privilege), not marked as ignorable (3 known properties: "user", "privilegeId", "permissions"])
+ at [Source: (String)"{   "address": "hanuman nagar",   "country": "india",   "dateOfBirth": "03-03-1997",   "email": "rawatabhishek2012@gmail.com",   "firstName": "abhishek",   "gender": "male",   "lastName": "rawat",   "middleName": "pradeep",   "password": "rawan",   "phone": "9869353231",   "privileges": [     {       "dashBoard": {         "add": true,         "delete": true,         "modify": true,         "read": true       },       "settings": {         "add": true,         "delete": true,         "modify": t"[truncated 231 chars]; line: 1, column: 317] (through reference chain: com.bridgelabz.usermanagement.dto.UserDTO["privileges"]->java.util.ArrayList[0]->com.bridgelabz.usermanagement.entity.Privilege["dashBoard"])]
+2019-12-28 12:16:22.149  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.controller.UserController          : Register controller method
+2019-12-28 12:16:22.149  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : Register service method
+2019-12-28 12:17:22.801  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.controller.UserController          : Login controller method
+2019-12-28 12:17:22.801  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : Login service method
+2019-12-28 12:17:23.759  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:19:30.906  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:31:42.888  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:31:46.150  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:31:49.340  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:34:18.247  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.controller.UserController          : Register controller method
+2019-12-28 12:34:18.247  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : Register service method
+2019-12-28 12:34:31.336  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:34:36.525  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:34:38.921  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:35:19.845  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:35:27.439  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:36:18.048  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:36:51.224  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:42:08.014  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:42:23.377  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:42:26.348  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:44:38.898  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:45:25.303  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:51:28.990  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:52:03.143  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:52:16.804  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:56:20.076  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:56:24.227  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:59:44.847  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 12:59:58.926  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 13:00:18.730  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:12:41.041  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:13:19.630  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:13:23.686  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:13:35.716  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:18:04.147  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:20:24.882  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:21:04.861  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 14:32:45.886  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:01:28.081  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:01:38.751  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:02:45.430  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:05:36.759  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:07:21.318  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:07:29.159  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:08:10.098  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:08:22.184  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:09:14.749  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:09:47.264  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:10:55.217  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:11:20.082  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:12:22.476  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:16:25.215  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:20:05.380  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:20:44.683  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:24:17.960  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:24:44.697  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:25:09.515  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:25:36.485  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:40:32.861  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:41:23.650  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:42:35.263  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:44:05.144  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:46:49.116  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:47:14.766  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:52:11.553  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:52:24.331  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:54:20.979  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 15:58:07.994  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:00:34.201  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:01:39.804  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:02:12.754  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:03:15.495  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:04:13.405  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:04:30.283  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:04:43.574  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:04:58.258  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:06:31.835  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:06:55.442  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:07:14.136  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:07:29.598  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:08:16.172  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:08:40.072  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:09:13.646  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:09:40.774  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:09:55.970  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:10:35.393  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:11:55.970  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:12:09.732  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:12:32.602  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:14:08.459  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:14:33.152  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:14:43.909  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:14:57.950  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:15:08.537  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:18:38.257  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:18:41.328  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:21:28.970  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:22:37.932  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:23:18.247  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:23:29.341  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:23:56.607  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:25:42.052  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:25:48.425  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:25:55.469  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:26:15.300  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:26:18.535  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:26:41.642  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:26:53.725  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:27:19.120  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:27:39.928  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:28:12.927  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:33:19.372  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:35:06.456  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:47:22.238  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:56:50.922  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:57:17.876  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:58:04.043  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:58:16.364  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 16:59:21.516  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:00:19.972  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:00:35.519  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:00:49.868  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:01:01.015  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:01:48.827  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:02:25.182  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:02:28.075  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:05:49.858  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:05:54.766  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:07:09.914  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:08:11.764  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:08:45.531  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:09:48.660  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:09:56.390  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:09:58.533  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:10:27.032  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:10:46.440  INFO 10884 --- [http-nio-8084-exec-9] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:11:11.900  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:11:20.418  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:15:46.008  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:15:57.345  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:40:37.437  INFO 10884 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 17:40:37.439  INFO 10884 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 17:40:37.590  INFO 10884 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-28 17:40:37.611  INFO 10884 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-28 17:40:38.770  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 17:40:38.770  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 17:40:40.937  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 17:40:40.944  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 3 JPA repository interfaces.
+2019-12-28 17:40:41.009  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 17:40:41.043  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 17:40:41.154  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 17:40:41.155  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 17:40:41.155  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 17:40:41.209  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 17:40:41.209  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2437 ms
+2019-12-28 17:40:41.263  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 17:40:41.269  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-12-28 17:40:41.378  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-12-28 17:40:41.378  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 17:40:45.503  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 17:40:45.503  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 17:40:45.516  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 17:40:45.720  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 17:40:45.812  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 17:40:45.859  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 17:40:45.937  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 17:40:45.938  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 17:40:45.942  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 17:40:46.045  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 17:40:46.048  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 7.44 seconds (JVM running for 19706.028)
+2019-12-28 17:40:46.054  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 17:40:47.335  INFO 10884 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 17:40:47.337  INFO 10884 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 17:40:47.338  INFO 10884 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-12-28 17:40:47.341  INFO 10884 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-12-28 17:40:47.431  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 17:40:47.431  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 17:40:47.609  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 17:40:47.616  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 3 JPA repository interfaces.
+2019-12-28 17:40:47.659  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 17:40:47.686  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 17:40:47.702  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 17:40:47.703  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 17:40:47.703  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 17:40:47.757  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 17:40:47.757  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 324 ms
+2019-12-28 17:40:47.791  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 17:40:47.795  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-12-28 17:40:47.854  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-12-28 17:40:47.854  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 17:40:48.726  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 17:40:48.727  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 17:40:48.736  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 17:40:48.832  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 17:40:48.888  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 17:40:48.920  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 17:40:48.962  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 17:40:48.963  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 17:40:48.965  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 17:40:49.003  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 17:40:49.003  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.587 seconds (JVM running for 19708.984)
+2019-12-28 17:40:49.004  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 17:41:21.414  INFO 10884 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 17:41:21.418  INFO 10884 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 17:41:21.419  INFO 10884 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-12-28 17:41:21.427  INFO 10884 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-12-28 17:41:21.564  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 17:41:21.565  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 17:41:21.747  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 17:41:21.756  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 3 JPA repository interfaces.
+2019-12-28 17:41:21.803  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 17:41:21.833  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 17:41:21.880  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 17:41:21.881  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 17:41:21.881  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 17:41:21.944  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 17:41:21.944  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 377 ms
+2019-12-28 17:41:21.976  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 17:41:21.979  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-12-28 17:41:22.044  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-12-28 17:41:22.045  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 17:41:23.062  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 17:41:23.062  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 17:41:23.071  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 17:41:23.168  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 17:41:23.223  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 17:41:23.254  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 17:41:23.297  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 17:41:23.297  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 17:41:23.301  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 17:41:23.339  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 17:41:23.340  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.797 seconds (JVM running for 19743.32)
+2019-12-28 17:41:23.341  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 17:49:52.934  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 17:49:52.938  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 17:49:52.942  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-12-28 17:49:52.991  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:54:56.937  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 17:54:57.117  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 17:54:57.123  WARN 10884 --- [http-nio-8084-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:37:20.418  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:37:20.468  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:37:20.476  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:37:22.650  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:37:22.699  WARN 10884 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:37:22.701  WARN 10884 --- [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:37:57.900  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:37:57.967  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:37:57.972  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:38:22.814  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:38:22.888  WARN 10884 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:38:22.891  WARN 10884 --- [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:39:20.526  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:39:20.596  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:39:20.602  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:40:27.418  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:40:27.496  WARN 10884 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:40:27.499  WARN 10884 --- [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:40:52.486  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:40:52.569  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:40:52.587  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: user not found]
+2019-12-28 18:41:09.944  WARN 10884 --- [http-nio-8084-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'emailIdToken' for method parameter of type String]
+2019-12-28 18:42:10.915  INFO 10884 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 18:42:10.917  INFO 10884 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 18:42:10.918  INFO 10884 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-12-28 18:42:10.920  INFO 10884 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-12-28 18:42:11.037  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 18:42:11.038  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 18:42:11.251  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 18:42:11.262  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 3 JPA repository interfaces.
+2019-12-28 18:42:11.319  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 18:42:11.357  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 18:42:11.379  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 18:42:11.380  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 18:42:11.380  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 18:42:11.413  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 18:42:11.414  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 373 ms
+2019-12-28 18:42:11.455  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 18:42:11.460  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-12-28 18:42:11.489  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-12-28 18:42:11.493  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 18:42:12.304  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 18:42:12.304  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 18:42:12.317  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 18:42:12.421  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 18:42:12.479  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 18:42:12.520  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 18:42:12.580  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 18:42:12.581  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 18:42:12.583  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 18:42:12.624  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 18:42:12.624  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.611 seconds (JVM running for 23392.605)
+2019-12-28 18:42:12.627  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 18:42:14.629  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 18:42:14.630  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 18:42:14.632  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-28 18:42:14.643  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:42:40.053  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:43:42.138  INFO 10884 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 18:43:42.141  INFO 10884 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 18:43:42.142  INFO 10884 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-12-28 18:43:42.147  INFO 10884 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-12-28 18:43:42.252  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 18:43:42.252  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 18:43:42.445  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 18:43:42.454  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 3 JPA repository interfaces.
+2019-12-28 18:43:42.504  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 18:43:42.534  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 18:43:42.699  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 18:43:42.700  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 18:43:42.700  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 18:43:42.707  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 18:43:42.707  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 454 ms
+2019-12-28 18:43:42.746  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 18:43:42.750  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-12-28 18:43:42.752  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-12-28 18:43:42.752  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 18:43:43.910  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 18:43:43.910  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 18:43:43.918  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 18:43:44.002  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 18:43:44.056  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 18:43:44.085  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 18:43:44.129  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 18:43:44.130  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 18:43:44.133  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 18:43:44.164  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 18:43:44.166  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.931 seconds (JVM running for 23484.146)
+2019-12-28 18:43:44.167  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 18:43:59.793  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 18:43:59.800  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 18:43:59.805  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-12-28 18:43:59.810  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:45:34.073  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:46:47.537  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:47:11.597  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:48:28.957  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:48:33.897  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:51:12.790  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:51:26.754  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:52:03.995  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:57:02.352  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:57:45.155  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 18:58:55.054  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:00:45.558  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:02:05.584  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:02:53.416  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:06:38.228  INFO 10884 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:06:38.230  INFO 10884 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:06:38.234  INFO 10884 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-12-28 19:06:38.240  INFO 10884 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-12-28 19:06:38.340  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 19:06:38.341  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 19:06:38.509  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 19:06:38.517  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 3 JPA repository interfaces.
+2019-12-28 19:06:38.559  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 19:06:38.587  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 19:06:38.603  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 19:06:38.604  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 19:06:38.604  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 19:06:38.643  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 19:06:38.644  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 301 ms
+2019-12-28 19:06:38.680  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 19:06:38.684  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2019-12-28 19:06:38.708  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2019-12-28 19:06:38.708  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 19:06:39.374  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 19:06:39.374  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:06:39.382  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 19:06:39.465  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 19:06:39.514  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 19:06:39.539  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:06:39.577  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 19:06:39.578  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 19:06:39.580  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 19:06:39.606  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 19:06:39.606  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.283 seconds (JVM running for 24859.587)
+2019-12-28 19:06:39.607  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 19:07:01.378  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 19:07:01.379  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 19:07:01.382  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-28 19:07:01.394  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:07:01.477  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:01.481  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:03.973  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:07:04.020  WARN 10884 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:04.024  WARN 10884 --- [http-nio-8084-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:06.231  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:07:06.284  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:06.289  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:24.052  INFO 10884 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:07:24.053  INFO 10884 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:07:24.054  INFO 10884 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2019-12-28 19:07:24.056  INFO 10884 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2019-12-28 19:07:24.155  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 19:07:24.156  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 19:07:24.304  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 19:07:24.310  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 3 JPA repository interfaces.
+2019-12-28 19:07:24.346  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 19:07:24.369  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 19:07:24.405  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 19:07:24.406  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 19:07:24.406  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 19:07:24.436  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 19:07:24.437  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 280 ms
+2019-12-28 19:07:24.465  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 19:07:24.469  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2019-12-28 19:07:24.471  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2019-12-28 19:07:24.471  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 19:07:25.103  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 19:07:25.103  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:07:25.110  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 19:07:25.190  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 19:07:25.237  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 19:07:25.263  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:07:25.304  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 19:07:25.305  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 19:07:25.307  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 19:07:25.333  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 19:07:25.334  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.194 seconds (JVM running for 24905.314)
+2019-12-28 19:07:25.335  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 19:07:28.964  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 19:07:28.965  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 19:07:28.967  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-28 19:07:29.043  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:07:29.057  WARN 10884 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:29.080  WARN 10884 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:31.340  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:07:31.387  WARN 10884 --- [http-nio-8084-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:07:31.393  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:08:27.812  INFO 10884 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:08:27.813  INFO 10884 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:08:27.814  INFO 10884 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2019-12-28 19:08:27.818  INFO 10884 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2019-12-28 19:08:27.919  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 19:08:27.919  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 19:08:28.084  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 19:08:28.091  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 3 JPA repository interfaces.
+2019-12-28 19:08:28.140  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 19:08:28.169  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 19:08:28.216  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 19:08:28.217  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 19:08:28.217  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 19:08:28.236  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 19:08:28.236  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 316 ms
+2019-12-28 19:08:28.269  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 19:08:28.272  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2019-12-28 19:08:28.274  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2019-12-28 19:08:28.275  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 19:08:28.880  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 19:08:28.880  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:08:28.888  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 19:08:28.977  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 19:08:29.029  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 19:08:29.055  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:08:29.100  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 19:08:29.101  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 19:08:29.103  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 19:08:29.132  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 19:08:29.133  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.228 seconds (JVM running for 24969.113)
+2019-12-28 19:08:29.134  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 19:08:35.769  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 19:08:35.769  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 19:08:35.772  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-28 19:08:35.786  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:08:35.863  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:08:35.866  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:08:37.620  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:08:37.668  WARN 10884 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:08:37.674  WARN 10884 --- [http-nio-8084-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:09:09.556  INFO 10884 --- [http-nio-8084-exec-5] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:09:09.634  WARN 10884 --- [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:09:09.637  WARN 10884 --- [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:09:24.424  WARN 10884 --- [http-nio-8084-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'emailIdToken' for method parameter of type String]
+2019-12-28 19:10:16.285  WARN 10884 --- [http-nio-8084-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'emailIdToken' for method parameter of type String]
+2019-12-28 19:12:33.972  INFO 10884 --- [Thread-43] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:12:33.973  INFO 10884 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:12:33.974  INFO 10884 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2019-12-28 19:12:33.977  INFO 10884 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2019-12-28 19:12:34.079  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 19:12:34.079  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 19:12:34.259  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 19:12:34.268  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 3 JPA repository interfaces.
+2019-12-28 19:12:34.311  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 19:12:34.339  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 19:12:34.361  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 19:12:34.361  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 19:12:34.361  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 19:12:34.409  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 19:12:34.409  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 328 ms
+2019-12-28 19:12:34.440  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 19:12:34.443  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2019-12-28 19:12:34.445  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2019-12-28 19:12:34.446  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 19:12:35.117  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 19:12:35.117  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:12:35.126  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 19:12:35.219  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 19:12:35.273  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 19:12:35.302  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:12:35.346  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 19:12:35.346  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 19:12:35.348  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 19:12:35.377  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 19:12:35.377  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.312 seconds (JVM running for 25215.358)
+2019-12-28 19:12:35.379  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 19:12:45.731  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 19:12:45.732  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 19:12:45.734  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-28 19:12:45.747  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:12:45.868  WARN 10884 --- [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:12:45.882  WARN 10884 --- [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.usermanagement.exception.custom.UserException: User does not have authority to fetch access data]
+2019-12-28 19:14:36.993  INFO 10884 --- [Thread-48] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:14:36.995  INFO 10884 --- [Thread-48] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:14:36.996  INFO 10884 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2019-12-28 19:14:37.000  INFO 10884 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2019-12-28 19:14:37.108  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Starting Application on admin with PID 10884 (/home/admin1/MangementUserProject/UserManagement/target/classes started by admin1 in /home/admin1/MangementUserProject/UserManagement)
+2019-12-28 19:14:37.108  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : No active profile set, falling back to default profiles: default
+2019-12-28 19:14:37.274  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-28 19:14:37.281  INFO 10884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 3 JPA repository interfaces.
+2019-12-28 19:14:37.318  INFO 10884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 19:14:37.342  WARN 10884 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-28 19:14:37.356  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-12-28 19:14:37.357  INFO 10884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-28 19:14:37.357  INFO 10884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-28 19:14:37.394  INFO 10884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-28 19:14:37.395  INFO 10884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 285 ms
+2019-12-28 19:14:37.428  INFO 10884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-28 19:14:37.431  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2019-12-28 19:14:37.433  INFO 10884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2019-12-28 19:14:37.433  INFO 10884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-28 19:14:38.013  INFO 10884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-28 19:14:38.013  INFO 10884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:14:38.026  INFO 10884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-28 19:14:38.113  WARN 10884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-28 19:14:38.164  INFO 10884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-28 19:14:38.189  INFO 10884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:14:38.230  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-28 19:14:38.230  INFO 10884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-28 19:14:38.232  INFO 10884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-28 19:14:38.262  INFO 10884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-12-28 19:14:38.262  INFO 10884 --- [restartedMain] c.bridgelabz.usermanagement.Application  : Started Application in 1.171 seconds (JVM running for 25338.243)
+2019-12-28 19:14:38.263  INFO 10884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-28 19:14:41.697  INFO 10884 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-28 19:14:41.698  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-28 19:14:41.700  INFO 10884 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-28 19:14:41.717  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:16:24.152  INFO 10884 --- [http-nio-8084-exec-10] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:17:27.181  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:18:23.899  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:18:55.354  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:19:43.741  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:20:40.364  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:20:43.458  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:21:02.909  INFO 10884 --- [http-nio-8084-exec-6] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:21:22.070  INFO 10884 --- [http-nio-8084-exec-2] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:22:17.956  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:22:49.132  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:23:06.562  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:23:17.118  INFO 10884 --- [http-nio-8084-exec-3] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:23:56.087  INFO 10884 --- [http-nio-8084-exec-7] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:24:22.325  INFO 10884 --- [http-nio-8084-exec-4] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:25:34.963  INFO 10884 --- [http-nio-8084-exec-1] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:25:46.493  INFO 10884 --- [http-nio-8084-exec-8] c.b.u.service.ImplUserService            : User fetched success
+2019-12-28 19:26:11.739  INFO 10884 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-28 19:26:11.740  INFO 10884 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 19:26:11.741  INFO 10884 --- [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-28 19:26:11.742  INFO 10884 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2019-12-28 19:26:11.747  INFO 10884 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
