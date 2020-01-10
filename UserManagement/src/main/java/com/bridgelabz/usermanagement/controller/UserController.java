@@ -110,7 +110,7 @@ public class UserController {
 	 * 
 	 */
 	@PostMapping("/register")
-	public ResponseEntity<Response> userRegister( @RequestParam("picture") MultipartFile file,
+	public ResponseEntity<Response> userRegister( @RequestParam(value="picture" , required= false) MultipartFile file,
 			@RequestParam("json") String json) throws JsonMappingException, JsonProcessingException {
 		UserDTO userDTO = new UserDTO();
 		userDTO = (UserDTO) JsonUtility.readMapper(json, userDTO);
@@ -167,7 +167,7 @@ public class UserController {
 	 */
 	@PutMapping("/updateuser")
 	public ResponseEntity<Response> updateUser(@RequestHeader String emailIdToken,
-			@RequestParam String json, @RequestParam("file") MultipartFile file) throws JsonMappingException, JsonProcessingException {
+			@RequestParam String json, @RequestParam(value="picture" , required= false) MultipartFile file) throws JsonMappingException, JsonProcessingException {
 		UserDTO userDTO = new UserDTO();
 		userDTO = (UserDTO) JsonUtility.readMapper(json, userDTO);
 		System.out.println(userDTO);

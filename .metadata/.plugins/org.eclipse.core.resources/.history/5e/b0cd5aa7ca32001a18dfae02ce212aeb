@@ -1,0 +1,57 @@
+/******************************************************************************
+ 
+ *  Purpose:  A Class  for creating the POJO class Of UserManagement Permission and 
+ *           this this class uses Entity to get know spring that it is POJO class.
+ *  		 
+ *  @author   Abhishek Rawat
+ *  @version  1.0
+ *  @since    17-12-2019
+ *
+ ******************************************************************************/
+package com.bridgelabz.usermanagement.entity;
+
+
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Permission {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int permissionId;
+
+	private String permissionName;
+	
+	private boolean add;
+	
+
+	private boolean delete;
+	
+
+	private boolean modify;
+	
+
+	private boolean read;
+	
+	@JsonIgnoreProperties(value = "privileges")
+	@ManyToOne(fetch = FetchType.LAZY)
+	private User user;
+	
+	
+
+}

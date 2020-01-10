@@ -33,7 +33,6 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-
 import com.bridgelabz.usermanagement.configuration.UserConfiguration;
 import com.bridgelabz.usermanagement.dto.AuthenticationDTO;
 import com.bridgelabz.usermanagement.dto.LoginDTO;
@@ -59,7 +58,7 @@ public class ImplUserService implements IUserService {
 
 	@Autowired
 	private UserConfiguration userConfiguration;
-	
+
 	@Autowired
 	private JavaMailSender emailSender;
 
@@ -90,19 +89,18 @@ public class ImplUserService implements IUserService {
 		return new Response(200, CommonFiles.LOGIN_SUCCESS, TokenUtility.tokenBuild(user.getEmail()));
 
 	}
-	
+
 	@Override
 	public Response userLogout(String email) {
 		User user = userRepository.findByEmail(email).orElse(null);
-		if(user == null) {
+		if (user == null) {
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
 		}
-		
+
 		user.setOnline(false);
 		userRepository.save(user);
 		return new Response(200, CommonFiles.LOGOUT_SUCCESS, user);
 	}
-
 
 	@Override
 	public Response userRegister(MultipartFile file, UserDTO register) {
@@ -118,18 +116,22 @@ public class ImplUserService implements IUserService {
 
 		if (file != null && file.getContentType() != null && !file.getContentType().toLowerCase().startsWith("image"))
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
-
-		byte[] bytes;
-		try {
-			bytes = file.getBytes();
-			String extension = file.getContentType().replace("image/", "");
-			String fileLocation = CommonFiles.PROFILE_PIC_PATH + user.getEmail() + "." + extension;
-			Path path = Paths.get(fileLocation);
-			Files.write(path, bytes);
-			user.setProfilePicture(fileLocation);
-		} catch (IOException e) {
-			e.printStackTrace();
+		
+		if(file !=null) {
+			byte[] bytes;
+			try {
+				bytes = file.getBytes();
+				String extension = file.getContentType().replace("image/", "");
+				String fileLocation = CommonFiles.PROFILE_PIC_PATH + user.getEmail() + "." + extension;
+				Path path = Paths.get(fileLocation);
+				Files.write(path, bytes);
+				user.setProfilePicture(fileLocation);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
+
+	
 
 		userRepository.save(user);
 
@@ -147,37 +149,32 @@ public class ImplUserService implements IUserService {
 		LOG.info(CommonFiles.SERVICE_FORGOTPASSWORD_METHOD);
 
 		if (userRepository.findByEmail(email).isEmpty()) {
-			throw new UserException( CommonFiles.EMAIL_FAILED+" "+email );
-          
+			throw new UserException(CommonFiles.EMAIL_FAILED + " " + email);
+
 		}
-		
-		 
-        SimpleMailMessage message = new SimpleMailMessage(); 
-        message.setTo(email); 
-        message.setSubject(CommonFiles.EMAIL_SUBJECT_SETPASSWORD); 
-        message.setText(CommonFiles.SET_PASSWORD_URL + TokenUtility.tokenBuild(email));
-        emailSender.send(message);
-        
-		
-		
+
+		SimpleMailMessage message = new SimpleMailMessage();
+		message.setTo(email);
+		message.setSubject(CommonFiles.EMAIL_SUBJECT_SETPASSWORD);
+		message.setText(CommonFiles.SET_PASSWORD_URL + TokenUtility.tokenBuild(email));
+		emailSender.send(message);
 
 		return new Response(200, CommonFiles.EMAIL_SUCCESS, true);
 
 	}
-	
+
 	@Override
 	public User userSetPassword(String password, String email) {
-		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(email))
-				.findAny().orElse(null);
-		
-		if (user == null ) {
+		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(email)).findAny().orElse(null);
+
+		if (user == null) {
 			throw new UserException(CommonFiles.SET_PASSWORD_FAILED);
 		}
-		
+
 		user.setPassword(userConfiguration.passwordEncoder().encode(password));
 
 		return userRepository.save(user);
-	}	
+	}
 
 	@Override
 	public User addProfilePic(String email, MultipartFile file) throws IOException {
@@ -237,28 +234,25 @@ public class ImplUserService implements IUserService {
 	}
 
 	@Override
-	public Response getProfilePic(String email , String userEmail) {
-		
-         User user = new User();
-		if(userEmail == "user") {
-			 user = userRepository.findByEmail(email).orElse(null);
-		}else {
-			 System.out.println("fetching user profile");
-			 User adminUser=userRepository.findByEmail(email).orElse(null);
-			 System.out.println("admin role"+ adminUser.getRole());
-			 if(!adminUser.getRole().equals("admin")) {
-				 throw new UserException(CommonFiles.USER_AUTHORITY);
-			 }
-			 user = userRepository.findByEmail(userEmail).orElse(null);
+	public Response getProfilePic(String email, String userEmail) {
+
+		User user = new User();
+		if (userEmail == "user") {
+			user = userRepository.findByEmail(email).orElse(null);
+		} else {
+			System.out.println("fetching user profile");
+			User adminUser = userRepository.findByEmail(email).orElse(null);
+			System.out.println("admin role" + adminUser.getRole());
+			if (!adminUser.getRole().equals("Admin")) {
+				throw new UserException(CommonFiles.USER_AUTHORITY);
+			}
+			user = userRepository.findByEmail(userEmail).orElse(null);
 		}
-	
+
 		if (user == null) {
 			throw new UserException(CommonFiles.USER_FOUND_FAILED);
 		}
-		
-		
-		
-		
+
 		String profilePic = "";
 		String filePath = CommonFiles.PROFILE_PIC_PATH;
 		File fileFolder = new File(filePath);
@@ -288,9 +282,6 @@ public class ImplUserService implements IUserService {
 		return new Response(200, CommonFiles.PATH_FEATCHED, profilePic);
 
 	}
-	
-	
-
 
 	@Override
 	public Response getAllUser() {
@@ -308,81 +299,89 @@ public class ImplUserService implements IUserService {
 
 	@Override
 	public Response loginHistory(String email) {
-		System.out.println("Login history email "+email);
-        User user = userRepository.findByEmail(email).orElse(null);
-		return  new Response(200, CommonFiles.LOGIN_HISTORY_LIST, user.getLogins());
+		System.out.println("Login history email " + email);
+		User user = userRepository.findByEmail(email).orElse(null);
+		return new Response(200, CommonFiles.LOGIN_HISTORY_LIST, user.getLogins());
 	}
 
 	@Override
 	public Response latestRegistration(String email) {
-		List<User> user =  userRepository.findAll();
-        Collections.reverse(user);
-		return  new Response(200, CommonFiles.LASTEST_REGISTRATION, user);
+		List<User> user = userRepository.findAll();
+		Collections.reverse(user);
+		return new Response(200, CommonFiles.LASTEST_REGISTRATION, user);
 	}
 
 	@Override
 	public Response totalUser(String email) {
-		  User user = userRepository.findByEmail(email).orElse(null);
-		  if (user == null) {
-			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
-		  }
-		  
-		  int count = userRepository.findAll().size();
-		  
-		  
-		  return  new Response(200, CommonFiles.TOTAL_USERS, count);
+		User user = userRepository.findByEmail(email).orElse(null);
+		if (user == null) {
+			throw new UserException(CommonFiles.USER_FOUND_FAILED);
+		}
+
+		int count = userRepository.findAll().size();
+
+		return new Response(200, CommonFiles.TOTAL_USERS, count);
 	}
 
 	@Override
 	public Response gender(String email) {
 
-		 User user = userRepository.findByEmail(email).orElse(null);
-		  if (user == null) {
-			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
-		  }
-		  
-		  int count = userRepository.findAll().size();
-		  List<User> maleUser = userRepository.findAll().stream().filter(i -> i.getGender().
-				  equals("male")).collect(Collectors.toList());
-		
-		  int malePercentage = maleUser.size()*100/count;
-		
-		  return  new Response(200, CommonFiles.TOTAL_USERS, malePercentage);
+		User user = userRepository.findByEmail(email).orElse(null);
+		if (user == null) {
+			throw new UserException(CommonFiles.USER_FOUND_FAILED);
+		}
+
+		int count = userRepository.findAll().size();
+		List<User> maleUser = userRepository.findAll().stream().filter(i -> i.getGender().equals("male"))
+				.collect(Collectors.toList());
+
+		int malePercentage = maleUser.size() * 100 / count;
+
+		return new Response(200, CommonFiles.TOTAL_USERS, malePercentage);
 	}
 
 	@Override
 	public Response deleteUser(String email) {
 		User user = userRepository.findByEmail(email).orElse(null);
 		userRepository.delete(user);
-		return new Response(200, CommonFiles.USER_DELETED,user );
+		return new Response(200, CommonFiles.USER_DELETED, user);
 	}
 
 	@Override
 	public Response authenticationSetting(String email, AuthenticationDTO authencticationDto) {
-		 User user = userRepository.findByEmail(email).orElse(null);
-		  if (user == null) {
-			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
-		  }
-		  
-		  Authentication auth = new Authentication();
-		  auth.setRememeberMe(authencticationDto.isRememeberMe());
-		  auth.setForgotPassword(authencticationDto.isForgotPassword());
-		  auth.setName(authencticationDto.getName());
-		  user.setAuthSetting(auth);
-		  
-		return new Response(200, CommonFiles.USER_DELETED,userRepository.save(user) );
+		User user = userRepository.findByEmail(email).orElse(null);
+		if (user == null) {
+
+			throw new UserException(CommonFiles.USER_FOUND_FAILED);
+		}
+
+		Authentication auth = new Authentication();
+
+		auth.setRememberMe(authencticationDto.isRememberMe());
+
+		auth.setForgotPassword(authencticationDto.isForgotPassword());
+
+		auth.setName(authencticationDto.getName());
+
+		user.setAuthSetting(auth);
+
+		return new Response(200, CommonFiles.AUTH_SETTING, userRepository.save(user));
 	}
 
 	@Override
 	public Response updateUser(String email, MultipartFile file, UserDTO userDTO) {
-		 User user = userRepository.findByEmail(email).orElse(null);
-		  if (user == null) {
-			  throw new UserException(CommonFiles.USER_FOUND_FAILED);  
-		  }
-		  
-		  if (file != null && file.getContentType() != null && !file.getContentType().toLowerCase().startsWith("image"))
-				throw new UserException(CommonFiles.USER_FOUND_FAILED);
+		User user = userRepository.findByEmail(email).orElse(null);
+		if (user == null) {
+			throw new UserException(CommonFiles.USER_FOUND_FAILED);
+		}
+		
+		userDTO.setPassword(userConfiguration.passwordEncoder().encode(userDTO.getPassword()));
 
+
+		if (file != null && file.getContentType() != null && !file.getContentType().toLowerCase().startsWith("image"))
+			throw new UserException(CommonFiles.USER_FOUND_FAILED);
+
+		if (file != null) {
 			byte[] bytes;
 			try {
 				bytes = file.getBytes();
@@ -394,22 +393,17 @@ public class ImplUserService implements IUserService {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
-			user = UserUtility.map(userDTO, user);
+		}
+		
 
-			userRepository.save(user);
-		  
-		  
-			return new Response(200, CommonFiles.USER_UPDATED,userRepository.save(user) );
+
+		user = UserUtility.map(userDTO, user);
+	
+		
+
+		
+
+		return new Response(200, CommonFiles.USER_UPDATED, userRepository.save(user));
 	}
-
-	
-
-
-	
-	
-	
-	
-	
 
 }

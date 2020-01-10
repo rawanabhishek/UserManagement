@@ -83,6 +83,7 @@ public class CommonFiles {
 	public static final String GET_USER = "User fetched success";
 	public static final String CONTROLLER_UPDATE_METHOD = "Controller update method";
 	public static final String CONTROLLER_LOGOUT_METHOD = "Controller logout method";
+	public static final String AUTH_SETTING = "Authentication setting updated successfully";
 
 
 	

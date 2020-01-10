@@ -12,11 +12,22 @@
  ******************************************************************************/
 package com.bridgelabz.usermanagement.dto;
 
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class AuthenticationDTO {
-	private boolean rememeberMe;
+@NoArgsConstructor
+@AllArgsConstructor
+public class AuthenticationDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private boolean rememberMe;
 	
 	private boolean forgotPassword;
 	

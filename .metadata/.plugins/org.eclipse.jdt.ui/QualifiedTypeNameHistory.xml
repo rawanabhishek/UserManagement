@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
@@ -12,7 +11,6 @@
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.exception.custom.UserException"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.RegisterDTO"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.LoginHistory"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.service.IUserService"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.LoginDTO"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.response.Response"/>
@@ -25,7 +23,6 @@
     <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.Permission"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
@@ -49,7 +46,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.dto.AuthenticationDTO"/>
-    <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.Authentication"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.User"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
     <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.utility.TokenUtility"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.usermanagement.entity.Permission"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
 </qualifiedTypeNameHistroy>
